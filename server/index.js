@@ -9,7 +9,7 @@ const { CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 const authController = require('./controllers/authController')
 const itemsController = require('./controllers/itemsController')
 
-
+//EXPRESS
 const app = express()
 
 app.use(express.json())
@@ -20,6 +20,7 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24}
 }))
 
+//MASSIVE
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false}

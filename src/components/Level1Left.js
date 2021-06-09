@@ -4,7 +4,7 @@ const Level1Left = () => {
     return (
         <div className =  "L1L level_background">
             <Link to = '/Level1Main'> <div className = "room_changer_right"> </div> </Link>
-            <Link to = '/WaterMeter'> <div className = "switch_to_water-meter">  </div> </Link>
+            <Link to = '/LeverOff'> <div className = "switch_to_lever">  </div> </Link>
         </div>
     )
 }

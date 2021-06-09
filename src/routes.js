@@ -9,7 +9,8 @@ import Level1Left from './components/Level1Left'
 import Level2Main from './components/Level2Main'
 import Level2Right from './components/Level2Right'
 import Level2Left from './components/Level2Left'
-import WaterMeterOff from './components/WaterMeterOff'
+import LeverOff from './components/LeverOff'
+import LeverOn from './components/LeverOn'
 import Chest from './components/Chest'
 import Key from './components/Key'
 import NoKey from './components/NoKey'
@@ -28,7 +29,8 @@ export default (
         <Route path = '/Level2Main' component = {Level2Main}/>
         <Route path = '/Level2Right' component = {Level2Right}/>
         <Route path = '/Level2Left' component = {Level2Left}/>
-        <Route path = '/WaterMeter' component = {WaterMeterOff}/>
+        <Route path = '/LeverOff' component = {LeverOff}/>
+        <Route path = '/LeverOn' component = {LeverOn}/>
         <Route path = '/Chest' component = {Chest}/>
         <Route path = '/Key' component = {Key}/>
         <Route path = '/NoKey' component = {NoKey}/>
