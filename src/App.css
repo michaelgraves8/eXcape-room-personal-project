@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    height: 50px;
+    z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homeTitle {
+    text-align: center;
+    color: gray;
+    font-size: 75px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main_background {
+    background: url('./images/Main-Background.jpg') no-repeat center center fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.L1M {
+    background: url('./images/Level1Main.jpg') no-repeat center center fixed; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.L1L {
+    background: url('./images/Level1Left.jpg') no-repeat center center fixed; 
 }
+
+.L1R {
+    background: url('./images/Level1Right.jpg') no-repeat center center fixed; 
+}
+
+.switch_to_water-meter {
+    height: 125px;
+    width: 100px;
+    position: absolute;
+    bottom: 175px;
+    right: 50px;
+    border-radius: 25%;
+}
+
+.switch_to_water-meter:hover {
+    opacity: 0.1;
+    background-color: seashell;
+}
+
+.Water_off {
+    background: url('./images/WaterOff.jpg') no-repeat center center fixed; 
+}
+
+.switch_to_chest {
+    /* background-color: purple; */
+    height: 50%;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    border-radius: 25%;
+}
+
+.switch_to_chest:hover {
+    opacity: 0.1;
+    background-color: seashell;
+}
+
+.closed_chest {
+    background: url('./images/Chest.jpg') no-repeat center center fixed; 
+}
+
+.switch_to_drawer {
+    /* background-color: purple; */
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.switch_to_drawer:hover {
+    opacity: 0.1;
+    background-color: seashell;
+}
+
+.switch_to_no_key {
+    /* background-color: purple; */
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.switch_to_no_key:hover {
+    opacity: 0.1;
+    background-color: seashell; 
+}
+
+.key {
+    background: url('./images/Key.jpg') no-repeat center center fixed; 
+}
+
+.no_key {
+    background: url('./images/NoKey.jpg') no-repeat center center fixed; 
+}
+
+.level_background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:absolute;
+    top: 25px;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+}
+
+.room_changer_left {
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    left: 0;
+}
+
+.room_changer_right {
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    right: 0;
+}
+
+
+.room_changer_left:hover {
+    opacity: 0.1;
+    background-color: seashell;
+}
+
+.room_changer_right:hover {
+    opacity: 0.1;
+    background-color: seashell;
+}
+
+.level_select {
+    display: flex;
+    flex-direction: column;
+}
+
