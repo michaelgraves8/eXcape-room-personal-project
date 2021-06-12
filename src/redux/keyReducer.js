@@ -1,20 +1,20 @@
 const initialState = {
-    key: false
+    grabbedKey: false
 }
 
 const SET_KEY = 'SET_KEY'
 
-export function setKey () {
+export function setKey (grab) {
     return {
         type: SET_KEY,
-        payload: true
+        payload: grab
     }
 }
 
 export default function keyReducer(state = initialState, action) {
     switch(action.type){
         case SET_KEY:
-            return {...state, uselever: action.payload}
+            return {...state, grabbedKey: action.payload}
         default:
             return {...state}
     }

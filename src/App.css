@@ -4,22 +4,41 @@
     text-align: center;
 }
 
+
+
+
 header {
-    display: flex;
-    justify-content: space-between;
     background-color: lightgray;
-    height: 50px;
+    height: 5%;
+    width: 100%;
     z-index: 1;
+    position: fixed;
+    top: 0;
 }
 
-.homeTitle {
+.logo {
+    position: fixed;
+    left: 5%;
+    margin-top: 0;
+}
+
+.header_links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    position: absolute;
+    right: 5%;
+}
+
+.home_title {
     text-align: center;
-    color: gray;
+    /* color: gray; */
     font-size: 75px;
 }
 
 .main_background {
     background: url('./images/Main-Background.jpg') no-repeat center center fixed;
+    color: gray;
 }
 
 .L1M {
@@ -32,6 +51,18 @@ header {
 
 .L1R {
     background: url('./images/Level1Right.jpg') no-repeat center center fixed; 
+}
+
+.L2M {
+    background: url('./images/Level2Main.jpg') no-repeat center center fixed;
+}
+
+.L2L {
+    background: url('./images/Level2Left.jpg') no-repeat center center fixed;
+}
+
+.L2R {
+    background: url('./images/Level2Right.jpg') no-repeat center center fixed;
 }
 
 .switch_to_lever {
@@ -92,8 +123,8 @@ header {
 
 .switch_to_drawer {
     /* background-color: purple; */
-    height: 50px;
-    width: 50px;
+    height: 10%;
+    width: 5%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -145,14 +176,14 @@ header {
 
 .room_changer_left {
     height: 100%;
-    width: 50px;
+    width: 4%;
     position: absolute;
     left: 0;
 }
 
 .room_changer_right {
     height: 100%;
-    width: 50px;
+    width: 4%;
     position: absolute;
     right: 0;
 }
@@ -188,7 +219,7 @@ header {
     -o-background-size: cover;
     background-size: cover;
     position:absolute;
-    top: 25px;
+    top: 5%;
     left:0;
     bottom:0;
     right:0;
@@ -196,3 +227,163 @@ header {
     width:100%;
 }
 
+.link_normalizer {
+    color: black;
+    text-decoration: none;
+}
+
+.link_normalizer_level {
+    color: gray;
+    text-decoration: none;
+}
+
+.box {
+    background-color: gray;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    left: 37.5%;
+    top: 25%;
+    border-radius: 10%;
+}
+
+.center {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+}
+
+.items {
+    background-color: gray;
+    width: 10%;
+    border-radius: 25%;
+}
+
+.level_select_box {
+    background-color: white;
+    color: gray;
+    position:absolute; 
+    top: 10%;
+    left:45%;
+    border-radius: 25%;
+    width: 15%; 
+    padding: 2%;
+}
+
+@media (max-width: 1000px) {
+    .header_links {
+        width: 50%;
+    }
+
+    .home_title  {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .switch_to_lever {
+        bottom: 35%;
+        height: 15%
+    }
+
+    .switch_to_chest {
+        bottom: 20%;
+        height: 30%;
+    }
+
+    .switch_to_no_key {
+        top: 45%;
+    }
+
+    .switch_to_success {
+        top: 50%;
+    }
+
+    .center {
+        left: 3%;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    header {
+        height: 10%;      
+    }
+
+    .header_links {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        right: 1%;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .home_title {
+        margin-top: 5%;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+    .level_select_box {
+        width: 50%;
+        left: 25%;
+    }
+
+    .switch_to_lever {
+        bottom: 35%;
+        height: 10%
+    }
+
+    .turn_lever_on {
+        height: 5%;
+        bottom: 60%;
+    }
+
+    .switch_to_chest {
+        bottom: 20%;
+        height: 30%;
+        width: 40%;
+        right: 0;
+    }
+
+    .switch_to_drawer{
+        height: 5%;
+    }
+
+    .switch_to_no_key {
+        top: 45%;
+        height: 5%
+    }
+
+    .switch_to_success {
+        top: 63%;
+        left: 87%;
+        height: 2%;
+    }
+
+    .items {
+        width: 20%;
+    }
+
+    .success {
+        margin-top: 10%;
+    }
+
+
+
+
+
+
+}

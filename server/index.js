@@ -8,6 +8,7 @@ const { CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 //CONTROLLERS
 const authController = require('./controllers/authController')
 const itemsController = require('./controllers/itemsController')
+const levelsController = require('./controllers/levelsController')
 
 //EXPRESS
 const app = express()
@@ -36,8 +37,16 @@ massive({
 app.post('/auth/register', authController.register)
 app.post('/auth/login', authController.login)
 app.get('/auth/logout', authController.logout)
+
 app.get('/api/items', itemsController.getItems)
 app.get('/api/inventory', itemsController.getInventory)
 app.post('/api/item', itemsController.addItem)
-// app.put('/api/updateItem', itemsController.updateItem)
-app.delete('/api/item:id', itemsController.deleteItem)
+app.delete('/api/item', itemsController.deleteItem)
+
+
+app.get('/api/levels', levelsController.getLevels)
+app.put('/api/levels:id', levelsController.updateLevel)
+
+app.get('/api/key', itemsController.getKey)
+app.get('/api/addkey', itemsController.addKey)
+app.delete('/api/deletekey', itemsController.deleteKey)

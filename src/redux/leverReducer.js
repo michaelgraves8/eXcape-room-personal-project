@@ -4,17 +4,17 @@ const initialState = {
 
 const SET_LEVER = 'SET_LEVER'
 
-export function setLever () {
+export function setLever (flip) {
     return {
         type: SET_LEVER,
-        payload: true
+        payload: flip
     }
 }
 
 export default function leverReducer(state = initialState, action) {
     switch(action.type){
         case SET_LEVER:
-            return {...state, uselever: action.payload}
+            return {...state, lever: action.payload}
         default:
             return {...state}
     }

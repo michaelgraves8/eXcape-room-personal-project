@@ -6,7 +6,7 @@ import keyReducer from './keyReducer'
 const rootReducer = combineReducers({
     auth: authReducer,
     lever: leverReducer,
-    key: keyReducer
+    grabbedKey: keyReducer
 })
 
 export default createStore(rootReducer)

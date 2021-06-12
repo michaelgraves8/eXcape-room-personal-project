@@ -14,8 +14,8 @@ import LeverOn from './components/LeverOn'
 import Chest from './components/Chest'
 import Key from './components/Key'
 import NoKey from './components/NoKey'
-
 import Success from './components/Success'
+import Comment from './components/Comment'
 
 export default (
     <Switch>
@@ -35,5 +35,6 @@ export default (
         <Route path = '/Key' component = {Key}/>
         <Route path = '/NoKey' component = {NoKey}/>
         <Route path = '/Success' component = {Success}/>
+        <Route path = '/Comment' component = {Comment}/>
     </Switch>
 )

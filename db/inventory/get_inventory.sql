@@ -1,2 +1,2 @@
 SELECT * FROM inventory 
-ORDER BY inventoryId;
+JOIN items ON inventory.itemId = items.itemId;

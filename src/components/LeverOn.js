@@ -1,6 +1,11 @@
 import {Link} from 'react-router-dom'
+import {useEffect} from 'react'
+
 
 const LeverOn = () => {
+    useEffect(() => {
+        // alert('Chest Unlocked')
+    }, [])
     return (
         <div className = "lever_on level_background">
             <Link to = '/Level1Left'> <div className = "room_changer_left"> </div> </Link>

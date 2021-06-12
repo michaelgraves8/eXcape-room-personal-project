@@ -11,6 +11,7 @@ const Auth = (props) => {
         .then((res) => {
             console.log(res.data)
             props.setUser(res.data)
+            props.history.push('/LevelSelect')
         })
         .catch(err => console.log(err))
     }
@@ -19,18 +20,30 @@ const Auth = (props) => {
         .then((res) => {
             console.log(res.data)
             props.setUser(res.data)
+            props.history.push('/LevelSelect')
         })
         .catch(err => console.log(err))
     }
     return (
         <div className = "main_background level_background">
-            <h1> Auth Page </h1>
-            <input value = {username} onChange = {(e) => setUsername(e.target.value)}/>
-            <input value = {password} onChange = {(e) => setPassword(e.target.value)}/>
-            <button onClick = {handleLogin}> Login </button>
-            <button onClick = {handleRegister}> Register </button>
+            <div className="box">
+                <div className="center auth">
+                    <h4> Create an account or Sign Up! </h4>
+                    <input placeholder="Username" value = {username} onChange = {(e) => setUsername(e.target.value)}/>
+                    <input placeholder="Password" value = {password} onChange = {(e) => setPassword(e.target.value)}/>
+                    <div>                        
+                    <button onClick = {handleLogin}> Login </button>
+                    <button onClick = {handleRegister}> Register </button>
+                    </div>
+                </div>
+            </div>           
         </div>
     )
 }
 
-export default connect(null, {setUser}) (Auth)
+const mapStateToProps = (stateRedux) => {
+    return stateRedux.auth
+}
+
+
+export default connect(mapStateToProps, {setUser}) (Auth)
