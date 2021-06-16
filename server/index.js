@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
+const path = require('path')
 
 const { CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env
 
@@ -13,6 +14,7 @@ const levelsController = require('./controllers/levelsController')
 //EXPRESS
 const app = express()
 
+app.use(express.static(__dirname + '/../build'))
 app.use(express.json())
 app.use(session({
     secret: SESSION_SECRET,
@@ -47,6 +49,12 @@ app.delete('/api/item', itemsController.deleteItem)
 app.get('/api/levels', levelsController.getLevels)
 app.put('/api/levels:id', levelsController.updateLevel)
 
-app.get('/api/key', itemsController.getKey)
-app.get('/api/addkey', itemsController.addKey)
-app.delete('/api/deletekey', itemsController.deleteKey)
+// app.get('/api/key', itemsController.getKey)
+// app.get('/api/addkey', itemsController.addKey)
+// app.delete('/api/deletekey', itemsController.deleteKey)
+
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '../build/index.html'))
+})
