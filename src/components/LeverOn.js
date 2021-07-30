@@ -4,7 +4,6 @@ import {useEffect} from 'react'
 
 const LeverOn = () => {
     useEffect(() => {
-        // alert('Chest Unlocked')
     }, [])
     return (
         <div className = "lever_on level_background">

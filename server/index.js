@@ -45,15 +45,8 @@ app.get('/api/inventory', itemsController.getInventory)
 app.post('/api/item', itemsController.addItem)
 app.delete('/api/item', itemsController.deleteItem)
 
-
-app.get('/api/levels', levelsController.getLevels)
-app.put('/api/levels:id', levelsController.updateLevel)
-
-// app.get('/api/key', itemsController.getKey)
-// app.get('/api/addkey', itemsController.addKey)
-// app.delete('/api/deletekey', itemsController.deleteKey)
-
-
+app.get('/api/levels/:username', levelsController.getLevels)
+app.put('/api/levels/:levelId/:username', levelsController.updateLevel)
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '../build/index.html'))

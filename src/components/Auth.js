@@ -1,16 +1,21 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import axios from 'axios'
 import {setUser} from '../redux/authReducer'
 import {connect} from 'react-redux'
+import { AuthContext } from "../context/AuthContext";
+
 
 const Auth = (props) => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+
+    const {username, setUsername, password, setPassword} = useContext(AuthContext)
+
+
     const handleRegister = () => {
         axios.post('/auth/register', {username, password})
         .then((res) => {
             console.log(res.data)
             props.setUser(res.data)
+            setUsername(username)
             props.history.push('/LevelSelect')
         })
         .catch(err => console.log(err))
@@ -20,10 +25,20 @@ const Auth = (props) => {
         .then((res) => {
             console.log(res.data)
             props.setUser(res.data)
+            setUsername(username)
             props.history.push('/LevelSelect')
         })
         .catch(err => console.log(err))
+    console.log('Login:',username)
+    console.log()
     }
+
+    const handleLogout = () => {
+        axios.get('/auth/logout')
+        setUsername(null)
+    console.log('Logout:',username)
+    }
+
     return (
         <div className = "main_background level_background">
             <div className="box">
@@ -34,6 +49,7 @@ const Auth = (props) => {
                     <div>                        
                     <button onClick = {handleLogin}> Login </button>
                     <button onClick = {handleRegister}> Register </button>
+                    <button onClick = {handleLogout}> Logout </button>
                     </div>
                 </div>
             </div>           

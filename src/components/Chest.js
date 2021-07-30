@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 
 
 const Chest = (props) => {
-    // console.log(props)
     return (
         <div className =  "closed_chest level_background">
             <Link to = '/Level1Right'> <div className = "room_changer_left"> </div> </Link>

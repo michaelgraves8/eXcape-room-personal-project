@@ -1,13 +1,16 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { AuthContext } from "../context/AuthContext";
 
 
 const Success = () => {
 
-    useEffect(() => {
-        axios.put('/api/levels1')
-        .then((res) => {
+    const {username} = useContext(AuthContext)
 
+    useEffect(() => {
+        axios.put(`/api/levels/1/${username}`)
+        .then((res) => {
+            
         })
         .catch(err => console.log(err))
     }, [])
